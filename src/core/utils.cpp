@@ -130,8 +130,6 @@ void to_string(String& str, u64 integer, u32 radix)
 
 void to_string(String& str, f32 number, u32 after_decimal)
 {
-    // TODO: This is not working! Have a look at this: https://github.com/antongus/stm32tpl/blob/master/ftoa.c
-    
     gn_assert_with_message(str.data, "Destination string for float to string conversion points to null!");
 
     u64 old_size = str.size;
@@ -161,8 +159,6 @@ void to_string(String& str, f32 number, u32 after_decimal)
 }
 void to_string(String& str, f64 number, u32 after_decimal)
 {
-    // TODO: This is not working! Have a look at this: https://github.com/antongus/stm32tpl/blob/master/ftoa.c
-
     gn_assert_with_message(str.data, "Destination string for float to string conversion points to null!");
 
     u64 old_size = str.size;

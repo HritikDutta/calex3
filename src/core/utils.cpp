@@ -176,11 +176,17 @@ void to_string(String& str, f64 number, u32 after_decimal)
     {
         str.data[str.size] = '.';
 
-        String fraction_string = { str.data + str.size + 1, old_size - str.size };
+        String fraction_string = { str.data + str.size + 1, 0 };
 
-        fractional *= pow(10.0, after_decimal);
-        to_string(fraction_string, abs((s64) fractional));
-        
+        constexpr char digits[] = "0123456789abcdef";
+        while (after_decimal)
+        {
+            fractional *= 10;
+            s32 index = ((s32) fractional) % 10;
+            fraction_string.data[fraction_string.size++] = digits[index];
+            after_decimal--;
+        }
+
         str.size += fraction_string.size + 1;
     }
 }

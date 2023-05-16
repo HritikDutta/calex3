@@ -5,7 +5,7 @@
 #include "containers/string.h"
 #include "core/logger.h"
 
-const char help_string[] =
+constexpr char help_string[] =
 "Calculate expressions.\n"
 "   usage: % <expression>\n"
 ;

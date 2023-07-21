@@ -23,6 +23,12 @@ f64 DIVIDE(f64 operands[])
     return operands[0] / operands[1];
 }
 
+// Remainder Operator
+f64 REMAINDER(f64 operands[])
+{
+    return fmod(operands[0], operands[1]);
+}
+
 // Addition Operator
 f64 ADD(f64 operands[])
 {

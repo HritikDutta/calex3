@@ -22,11 +22,12 @@ const KeywordData keyword_table[] =
     // Operators
     KeywordData(ref("-"), NEG, 1, 0),
 
-    KeywordData(ref("sqrt"), SQRT,     1, 1),
-    KeywordData(ref("exp"),  EXP,      1, 1),
-    KeywordData(ref("*"),    MULTIPLY, 2, 1),
-    KeywordData(ref("/"),    DIVIDE,   2, 1),
-    KeywordData(ref("^"),    POW,      2, 1),
+    KeywordData(ref("sqrt"), SQRT,      1, 1),
+    KeywordData(ref("exp"),  EXP,       1, 1),
+    KeywordData(ref("*"),    MULTIPLY,  2, 1),
+    KeywordData(ref("/"),    DIVIDE,    2, 1),
+    KeywordData(ref("%"),    REMAINDER, 2, 1),
+    KeywordData(ref("^"),    POW,       2, 1),
 
     KeywordData(ref("+"), ADD,      2, 2),
     KeywordData(ref("-"), SUBTRACT, 2, 2),
